@@ -1,0 +1,32 @@
+# Starter pipeline
+- task: TerraformCLI@0
+  inputs:
+    command: 'init'
+    backendType: 'azurerm'
+    backendServiceArm: 'ejadademo – MPN (9707751e-bb10-42ab-a3b2-cd05593218ae)'
+    backendAzureRmSubscriptionId: '9707751e-bb10-42ab-a3b2-cd05593218ae'
+    ensureBackend: true
+    backendAzureRmResourceGroupName: 'tfbed'
+    backendAzureRmResourceGroupLocation: 'East US'
+    backendAzureRmStorageAccountName: 'tfberg'
+    backendAzureRmContainerName: 'tfbend'
+    backendAzureRmKey: 'tf.tfstate'
+    allowTelemetryCollection: true
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- script: echo Hello, world!
+  displayName: 'Run a one-line script'
+
+- script: |
+    echo Add other tasks to build, test, and deploy your project.
+    echo See https://aka.ms/yaml
+  displayName: 'Run a multi-line script'
