@@ -27,7 +27,7 @@ steps:
     command: 'plan'
     environmentServiceName: 'ejadademo – MPN (9707751e-bb10-42ab-a3b2-cd05593218ae)'
     providerAzureRmSubscriptionId: '9707751e-bb10-42ab-a3b2-cd05593218ae'
-    allowTelemetryCollection: true 
+    allowTelemetryCollection: true
 
 - task: TerraformCLI@0
   inputs:
