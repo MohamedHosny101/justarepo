@@ -25,6 +25,7 @@ steps:
 - task: TerraformCLI@0
   inputs:
     command: 'plan'
+    workingDirectory: '$(Pipeline.Workspace)/main.tf
     environmentServiceName: 'ejadademo – MPN (9707751e-bb10-42ab-a3b2-cd05593218ae)'
     providerAzureRmSubscriptionId: '9707751e-bb10-42ab-a3b2-cd05593218ae'
     allowTelemetryCollection: true
